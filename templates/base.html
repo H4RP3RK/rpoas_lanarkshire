@@ -3,9 +3,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% block meta %}
     <meta http-equiv="X-UA_Compatible" content="ie=edge"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block extra_meta %}
+{% endblock %}
+
+{% block corecss%}
+{% endblock %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block corejs%}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
+
     <title>RPOAS Lanarkshire</title>
 </head>
 <body>
@@ -15,6 +33,19 @@
         </a>
         <h1 class="header__text">Retired Police Officers Association Lanarkshire</h1>
     </header>
+
+{% if messages %}
+    <section class="message-container">
+
+    </section>
+{% endif %}    
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
     <main class="main">
         <section class="banner">
             <h2 class="banner_text">Join our RPOAS family today</h2>
@@ -78,5 +109,9 @@
             <span class="footer__text">Lanarkshire Police Historical Society</span>
         </a>
     </footer>
+
+{% block postloadjs %}
+{% endblock %}
+
 </body>
 </html>
