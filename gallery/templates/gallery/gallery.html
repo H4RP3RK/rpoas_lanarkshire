@@ -3,17 +3,20 @@
 
 {% block content%}
 <!-- Search by title or description -->
-<form action="{% url 'gallery' %}" method="GET">
-    <input type="text" aria-label="Search" name="q">
-    <input type="submit" value="Search">
+<form class="search-form" action="{% url 'gallery' %}" method="GET">
+    <input class="search-input" type="text" aria-label="Search" name="q">
+    <input class="search-btn" type="submit" value="Search">
 </form>
 <!-- Filter by Location -->
-<button type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
+<button class="dropdown-btn" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
 
 <!-- Filter by Year -->
-<button type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+<button class="dropdown-btn" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
 
 <!-- Sort -->
-<button type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+<button class="dropdown-btn" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
 
+<span class="result-count"></span>
+
+<img class="image" src="" alt="">
 {% endblock %}
