@@ -1,0 +1,20 @@
+{
+  "name": "rpoas_lanarkshire-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o dist static/css/styles.scss",
+    "dev": "onchange 'static/css/**/*.scss' -- npm run css",
+    "lint": "sass-lint sass/** -v -q"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "onchange": "^7.1.0",
+    "sass-lint": "^1.13.1"
+  }
+}

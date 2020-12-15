@@ -17,6 +17,8 @@
 <button class="dropdown-btn" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
 
 <span class="result-count"></span>
+{% for image in images %}
+<img class="image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
+{% endfor %}
 
-<img class="image" src="" alt="">
 {% endblock %}
