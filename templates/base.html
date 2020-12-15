@@ -1,4 +1,4 @@
-{% load sass_tags %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +13,12 @@
 {% endblock %}
 
 {% block corecss%}
-<link href="{% dist 'styles.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block extra_css %}
 {% endblock %}
-Hello 
+
 {% block corejs%}
 {% endblock %}
 
@@ -47,7 +47,7 @@ Hello
 {% block content %}
 {% endblock %}
 
-    
+
     <footer class="footer">
         <a class="footer__link" href="#">
             <img class="footer__logo" src="/media/rpoas_logo.png" alt="RPOAS Scotland">

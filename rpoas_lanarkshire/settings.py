@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # Sass
     'django_sass',
     'sass_processor',
+    'compressor'
 ]
 
 MIDDLEWARE = [
@@ -109,7 +110,7 @@ WSGI_APPLICATION = 'rpoas_lanarkshire.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -150,15 +151,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-STATIC_ROOT = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), 
+]
 SASS_PROCESSOR_ROOT = STATIC_ROOT
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

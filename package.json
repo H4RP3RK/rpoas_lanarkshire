@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o dist static/css/styles.scss",
+    "css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o dist src/index.scss",
     "dev": "onchange 'static/css/**/*.scss' -- npm run css",
     "lint": "sass-lint sass/** -v -q"
   },
