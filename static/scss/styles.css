@@ -393,19 +393,40 @@ template {
 :root {
   --font-body: 'Open Sans', sans-serif;
   --font-heading: 'Playfair Display', serif;
+  --heading-background: linear-gradient(#006a94 0%, #00387b 100%);
+  --banner-background: linear-gradient( #f7d994 0%, #BAA571 100%);
+  --primary-1: #00387b;
+  --primary-2: #baa571;
+  --primary-3: #640738;
+  --primary-1-tint: #ccd7e5;
+  --primary-2-tint: #f1ede3;
+  --primary-3-tint: #E0CDD7;
 }
 
 body {
   font-family: var(--font-body);
+  color: var(--primary-1);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+a {
+  text-decoration: none;
+}
+
+section {
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
 .header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#006a94), to(#00387b));
-  background-image: linear-gradient(#006a94 0%, #00387b 100%);
+  background-image: var(--heading-background);
   text-align: center;
   padding: 2rem 1rem;
 }
@@ -416,5 +437,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__text {
   color: #ffffff;
+}
+
+.banner {
+  background-image: var(--banner-background);
+}
+
+.btn {
+  border: 2px solid var(--primary-2);
+  border-radius: 10px;
+  background-color: var(--primary-3);
+  color: var(--primary-2);
+  text-align: center;
+  padding: 1rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+  border-color: var(--primary-3);
+  color: var(--primary-3);
+  background-color: var(--primary-2);
+}
+
+.welcome-image {
+  padding: 0;
+}
+
+.welcome-image__text {
+  background-color: var(primary-2-tint);
 }
 /*# sourceMappingURL=styles.css.map */

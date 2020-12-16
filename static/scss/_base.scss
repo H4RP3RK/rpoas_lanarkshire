@@ -1,9 +1,23 @@
 body {
     font-family: var(--font-body);
+    color: var(--primary-1);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+}
 
+a {
+    text-decoration: none;
+
+}
+
+section {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+img {
+    max-width: 100%;
 }
 
