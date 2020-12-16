@@ -1,0 +1,18 @@
+.header {
+    background-image: linear-gradient(#006a94 0%, #00387b 100%);
+    text-align: center;
+    padding: 2rem 1rem;
+    
+
+    &__logo-link {
+
+    }
+
+    &__logo-image {
+        width: 75%;
+    }
+
+    &__text {
+        color: #ffffff;
+    }
+}
