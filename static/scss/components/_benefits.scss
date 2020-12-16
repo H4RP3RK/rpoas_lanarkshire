@@ -1,0 +1,14 @@
+.benefits {
+    background-color: var(--primary-2-tint);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+
+    &__list-item {
+        padding: 0.5rem;
+    }
+
+    &__list {
+        padding-bottom: 2rem;
+    }
+}

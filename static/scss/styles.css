@@ -398,8 +398,8 @@ template {
   --primary-1: #00387b;
   --primary-2: #baa571;
   --primary-3: #640738;
-  --primary-1-tint: #ccd7e5;
-  --primary-2-tint: #f1ede3;
+  --primary-1-tint: #ffffff;
+  --primary-2-tint: #ccd7e5;
   --primary-3-tint: #E0CDD7;
 }
 
@@ -418,11 +418,18 @@ a {
 
 section {
   text-align: center;
-  padding: 1rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 img {
   max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -437,6 +444,18 @@ img {
 
 .header__text {
   color: #ffffff;
+}
+
+.footer {
+  background-image: var(--heading-background);
+}
+
+.footer__link {
+  display: inline-block;
+}
+
+.footer__logo {
+  height: 2.5em;
 }
 
 .banner {
@@ -461,10 +480,37 @@ img {
 }
 
 .welcome-image {
-  padding: 0;
+  background-color: var(--primary-1-tint);
 }
 
-.welcome-image__text {
-  background-color: var(primary-2-tint);
+.join-us {
+  background-color: var(--primary-2-tint);
+}
+
+.testimonials {
+  background-color: var(--primary-1-tint);
+}
+
+.testimonials__list {
+  margin-top: 1rem;
+}
+
+.testimonials__list-item {
+  padding: 0.5rem;
+}
+
+.benefits {
+  background-color: var(--primary-2-tint);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.benefits__list-item {
+  padding: 0.5rem;
+}
+
+.benefits__list {
+  padding-bottom: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
