@@ -3,22 +3,22 @@
 
 {% block content%}
 <!-- Search by title or description -->
-<form class="search-form" action="{% url 'gallery' %}" method="GET">
-    <input class="search-input" type="text" aria-label="Search" name="q">
-    <input class="search-btn" type="submit" value="Search">
+<h2 class="gallery__heading">Historical Photo Gallery</h2>
+<p class="gallery__text">Search through our collection of photos and see if you can spot any familiar faces/locations. Search for something in particular or filter by location or year. Click on each photo for a full description.</p>
+<form class="gallery__search-form" action="{% url 'gallery' %}" method="GET">
+    <input class="gallery__search-input" type="text" aria-label="Search" name="q">
+    <input class="gallery__search-btn btn__primary" type="submit" value="Search">
 </form>
-<!-- Filter by Location -->
-<button class="dropdown-btn" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
 
-<!-- Filter by Year -->
-<button class="dropdown-btn" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+    <!-- Filter by Location -->
+    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
+    <!-- Filter by Year -->
+    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+    <!-- Sort -->
+    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
 
-<!-- Sort -->
-<button class="dropdown-btn" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
-
-<span class="result-count"></span>
 {% for image in images %}
-<img class="image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
+<img class="gallery__image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
 {% endfor %}
 
 {% endblock %}

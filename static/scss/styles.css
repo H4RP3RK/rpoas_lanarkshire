@@ -507,7 +507,7 @@ ul {
   background-image: var(--gradient-2);
 }
 
-.btn {
+.btn__action {
   border: 2px solid var(--primary-2);
   border-radius: 10px;
   background-image: var(--gradient-3);
@@ -520,10 +520,36 @@ ul {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn:hover {
+.btn__action:hover {
   border-color: var(--primary-3);
   color: var(--primary-3);
   background-image: var(--gradient-2);
+}
+
+.btn__primary {
+  border-color: var(--primary-2);
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: var(--primary-1);
+  color: #ffffff;
+}
+
+.btn__primary:hover {
+  background-color: #ffffff;
+  color: var(--primary-1);
+}
+
+.btn__secondary {
+  border-color: var(--primary-2);
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: var(--primary-1);
+}
+
+.btn__secondary:hover {
+  background-color: var(--primary-1);
+  color: #ffffff;
 }
 
 .welcome-image {
@@ -556,5 +582,28 @@ ul {
 
 .benefits__list {
   padding-bottom: 1rem;
+}
+
+.gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gallery__heading {
+  text-align: center;
+}
+
+.gallery__text {
+  text-align: center;
+}
+
+.gallery__search-form {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery__search-input {
+  padding: 0.4rem;
 }
 /*# sourceMappingURL=styles.css.map */

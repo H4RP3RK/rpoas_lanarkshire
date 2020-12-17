@@ -1,0 +1,22 @@
+.gallery {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__search-form {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__search-input {
+        padding: 0.4rem;
+    }    
+}
