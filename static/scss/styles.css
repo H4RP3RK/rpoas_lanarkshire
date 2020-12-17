@@ -601,9 +601,14 @@ ul {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  vertical-align: center;
 }
 
 .gallery__search-input {
-  padding: 0.4rem;
+  padding: 0.5rem;
+}
+
+.gallery__dropdown-btn {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */
