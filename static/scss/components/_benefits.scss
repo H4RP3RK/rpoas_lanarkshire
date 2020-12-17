@@ -2,10 +2,12 @@
     background-color: var(--primary-1-tint);
 
     &__list-item {
-        padding: 0.5rem;
+        padding: 1rem 0.5rem;
+        
     }
 
     &__list {
         padding-bottom: 1rem;
+        
     }
 }

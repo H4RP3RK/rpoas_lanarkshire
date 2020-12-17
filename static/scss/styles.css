@@ -459,6 +459,10 @@ ul {
   padding-bottom: 2rem;
 }
 
+.header__link {
+  width: 50%;
+}
+
 .header__logo-image {
   width: 75%;
 }
@@ -487,7 +491,7 @@ ul {
 }
 
 .footer__logo {
-  height: 2.5em;
+  height: 4em;
 }
 
 .footer__fa-logo {
@@ -539,7 +543,7 @@ ul {
 }
 
 .testimonials__list-item {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .benefits {
@@ -547,7 +551,7 @@ ul {
 }
 
 .benefits__list-item {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .benefits__list {
