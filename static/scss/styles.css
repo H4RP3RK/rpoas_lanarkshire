@@ -393,13 +393,14 @@ template {
 :root {
   --font-body: 'Open Sans', sans-serif;
   --font-heading: 'Playfair Display', serif;
-  --heading-background: linear-gradient(#006a94 0%, #00387b 100%);
-  --banner-background: linear-gradient( #f7d994 0%, #BAA571 100%);
+  --gradient-1: linear-gradient(#006a94 0%, #00387b 100%);
+  --gradient-2: linear-gradient(#f7d994 0%, #BAA571 100%);
+  --gradient-3: linear-gradient(#833960 0%, #640738 100%);
   --primary-1: #00387b;
   --primary-2: #baa571;
   --primary-3: #640738;
   --primary-1-tint: #ffffff;
-  --primary-2-tint: #ccd7e5;
+  --primary-2-tint: #ebeff5;
   --primary-3-tint: #E0CDD7;
 }
 
@@ -410,10 +411,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-transform: uppercase;
+}
+
+p, span {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 a {
   text-decoration: none;
+}
+
+ul a {
+  font-weight: bold;
+  color: var(--primary-1);
+}
+
+ul a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 section {
@@ -429,13 +448,15 @@ img {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .header {
-  background-image: var(--heading-background);
+  background-image: var(--gradient-1);
   text-align: center;
-  padding: 2rem 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .header__logo-image {
@@ -447,28 +468,50 @@ ul {
 }
 
 .footer {
-  background-image: var(--heading-background);
+  background-image: var(--gradient-1);
+  text-align: center;
 }
 
-.footer__link {
+.footer__container {
   display: inline-block;
+  width: 45%;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
 }
 
 .footer__logo {
   height: 2.5em;
 }
 
+.footer__fa-logo {
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+.footer__text {
+  color: #ffffff;
+}
+
 .banner {
-  background-image: var(--banner-background);
+  background-image: var(--gradient-2);
 }
 
 .btn {
   border: 2px solid var(--primary-2);
   border-radius: 10px;
-  background-color: var(--primary-3);
+  background-image: var(--gradient-3);
   color: var(--primary-2);
   text-align: center;
   padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -476,7 +519,7 @@ ul {
 .btn:hover {
   border-color: var(--primary-3);
   color: var(--primary-3);
-  background-color: var(--primary-2);
+  background-image: var(--gradient-2);
 }
 
 .welcome-image {
@@ -488,7 +531,7 @@ ul {
 }
 
 .testimonials {
-  background-color: var(--primary-1-tint);
+  background-color: var(--primary-2-tint);
 }
 
 .testimonials__list {
@@ -500,10 +543,7 @@ ul {
 }
 
 .benefits {
-  background-color: var(--primary-2-tint);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 2rem;
+  background-color: var(--primary-1-tint);
 }
 
 .benefits__list-item {
@@ -511,6 +551,6 @@ ul {
 }
 
 .benefits__list {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

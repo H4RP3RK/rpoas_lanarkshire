@@ -1,7 +1,8 @@
 .header {
-    background-image: var(--heading-background);
+    background-image: var(--gradient-1);
     text-align: center;
-    padding: 2rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     &__logo-image {
         width: 75%;

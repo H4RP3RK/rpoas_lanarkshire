@@ -7,8 +7,9 @@
     --font-heading: 'Playfair Display', serif;
 
     // Backgrounds
-    --heading-background: linear-gradient(#006a94 0%, #00387b 100%);
-    --banner-background: linear-gradient( #f7d994 0%, #BAA571 100%);
+    --gradient-1: linear-gradient(#006a94 0%, #00387b 100%);
+    --gradient-2: linear-gradient(#f7d994 0%, #BAA571 100%);
+    --gradient-3: linear-gradient(#833960 0%, #640738 100%);
 
     // Colours
     --primary-1: #00387b;
@@ -17,7 +18,7 @@
 
     // Colour Tints
     --primary-1-tint: #ffffff;
-    --primary-2-tint: #ccd7e5; 
+    --primary-2-tint: #ebeff5; 
     --primary-3-tint: #E0CDD7;
 
 }

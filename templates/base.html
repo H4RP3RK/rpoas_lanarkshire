@@ -13,7 +13,8 @@
 {% endblock %}
 
 {% block corecss%}
-<link href="{% static 'scss/styles.css' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" type="text/css">
+    <link href="{% static 'scss/styles.css' %}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block extra_css %}
@@ -52,22 +53,30 @@
 
 
     <footer class="footer">
-        <a class="footer__link" href="#">
-            <img class="footer__logo" src="/media/rpoas_logo.png" alt="RPOAS Scotland">
-            <span class="footer__text">RPOAS Scotland</span>
-        </a>
-        <a class="footer__link" href="#">
-            <img class="footer__logo" src="" alt="RPOAS Lanarkshire Facebook">
-            <span class="footer__text">RPOAS Lanarkshire Facebook</span>
-        </a>
-        <a class="footer__link" href="#">
-            <img class="footer__logo" src="" alt="RPOAS Lanarkshire Email">
-            <span class="footer__text">RPOAS Lanarkshire Email</span>
-        </a>
-        <a class="footer__link" href="#">
-            <img class="footer__logo" src="/media/lphsbadge.png" alt="Lanarkshire Police Historical Society">
-            <span class="footer__text">Lanarkshire Police Historical Society</span>
-        </a>
+        <article class="footer__container">
+            <a class="footer__link" href="#">
+                <i class="footer__fa-logo fab fa-facebook-square"></i>
+                <h6 class="footer__text">RPOAS Lanarkshire Facebook</h6>
+            </a>
+        </article>
+        <article class="footer__container">
+            <a class="footer__link" href="#">
+                <i class="footer__fa-logo fas fa-envelope"></i>
+                <h6 class="footer__text">RPOAS Lanarkshire Email</h6>
+            </a>
+        </article>
+        <article class="footer__container">
+            <a class="footer__link" href="#">
+                <img class="footer__logo" src="/media/rpoas_logo.png" alt="RPOAS Scotland">
+                <h6 class="footer__text">RPOAS Scotland</h6>
+            </a>
+        </article>
+        <article class="footer__container">
+            <a class="footer__link" href="#">
+                <img class="footer__logo" src="/media/lphsbadge.png" alt="Lanarkshire Police Historical Society">
+                <h6 class="footer__text">Lanarkshire Police Historical Society</h6>
+            </a>
+        </article>
     </footer>
 
 {% block postloadjs %}
