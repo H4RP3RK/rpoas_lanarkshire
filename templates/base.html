@@ -37,6 +37,23 @@
         <a class="banner__link" href="#">
             <h2 class="banner_text btn__action">Join our RPOAS family today</h2>
         </a>
+        <nav class="header__nav">
+            <a class="header__nav-link" href="{% url 'home' %}">
+                <h5>Home</h5>
+            </a> |
+            <a class="header__nav-link" href="{% url 'gallery' %}">
+                <h5>Gallery</h5>
+            </a> |
+            <a class="header__nav-link" href="#">
+                <h5>Events</h5>
+            </a> |
+            <a class="header__nav-link" href="#">
+                <h5>News</h5>
+            </a> |
+            <a class="header__nav-link" href="{% url 'gallery' %}">
+                <h5>Contact</h5>
+            </a>
+        </nav>
     </header>
 
 {% if messages %}

@@ -455,8 +455,8 @@ ul {
 .header {
   background-image: var(--gradient-1);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1rem;
+  color: #ffffff;
 }
 
 .header__link {
@@ -467,8 +467,13 @@ ul {
   width: 75%;
 }
 
-.header__text {
+.header__nav-link {
   color: #ffffff;
+  display: inline-block;
+}
+
+.header__nav-link:hover {
+  text-decoration: underline;
 }
 
 .footer {

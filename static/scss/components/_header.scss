@@ -1,8 +1,8 @@
 .header {
     background-image: var(--gradient-1);
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 1rem;
+    color: #ffffff;
 
     &__link {
         width: 50%;
@@ -12,7 +12,12 @@
         width: 75%;
     }
 
-    &__text {
+    &__nav-link {
         color: #ffffff;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
