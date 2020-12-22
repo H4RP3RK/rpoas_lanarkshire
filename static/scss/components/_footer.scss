@@ -1,15 +1,17 @@
 .footer {
     background-image: var(--gradient-1);
     text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
     &__container {
-        display: inline-block;
-        width: 45%;
         text-align: center;
-        vertical-align: top;
+        vertical-align: bottom;
         padding-top: 1rem;
         margin-left: auto;
         margin-right: auto;
+        flex: 2;
     }
 
     &__link:hover {
@@ -27,5 +29,13 @@
 
     &__text {
         color: #ffffff;
+    }
+}
+
+@media all and (min-width: 720px) {
+    .footer {
+        &__container {
+            flex: 4;
+        }
     }
 }

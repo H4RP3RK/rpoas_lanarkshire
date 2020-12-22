@@ -508,16 +508,27 @@ ul {
 .footer {
   background-image: var(--gradient-1);
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__container {
-  display: inline-block;
-  width: 45%;
   text-align: center;
-  vertical-align: top;
+  vertical-align: bottom;
   padding-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .footer__link:hover {
@@ -535,6 +546,14 @@ ul {
 
 .footer__text {
   color: #ffffff;
+}
+
+@media all and (min-width: 720px) {
+  .footer__container {
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+  }
 }
 
 .btn__action {
