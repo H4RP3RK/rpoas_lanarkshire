@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.welcome-image {
+    background-color: var(--primary-1-tint);
+}
+
+.join-us {
+    background-color: var(--primary-2-tint);
+}
+
+.benefits {
+    background-color: var(--primary-1-tint);
+
+    &__list-item {
+        padding: 1rem 0.5rem;
+    }
+
+    &__list {
+        padding-bottom: 1rem;   
+    }
+}
+
+.testimonials {
+    background-color: var(--primary-2-tint);
+
+    &__list {
+        margin-top: 1rem;
+    }
+
+    &__list-item {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media all and (min-width: 720px) {
+    .join-us,
+    .benefits,
+    .testimonials
+     {
+        flex: 1 auto;
+    }
+  }
