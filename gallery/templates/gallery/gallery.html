@@ -18,8 +18,12 @@
     <button class="gallery_btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
 </form>
 
+<section class="gallery__container">
 {% for image in images %}
-<img class="gallery__image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
+<div class="gallery__single-container">
+    <img class="gallery__image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
+</div>
 {% endfor %}
+</section>
 
 {% endblock %}

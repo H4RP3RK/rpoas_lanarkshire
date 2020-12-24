@@ -628,6 +628,31 @@ ul {
   margin-top: 1rem;
 }
 
+.gallery__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media all and (min-width: 720px) {
+  .gallery__single-container {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-height: 210px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .gallery__single-container {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
