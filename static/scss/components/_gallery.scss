@@ -21,7 +21,8 @@
         padding: 0.5rem;
     }   
     
-    &__dropdown-btn {
+    &__dropdown-btn,
+    &__btn {
         margin-top: 1rem;
     }
 
@@ -35,7 +36,6 @@
     .gallery {
         &__single-container {
             flex-basis: 50%;
-            max-height: 210px;
         }
     }
 }

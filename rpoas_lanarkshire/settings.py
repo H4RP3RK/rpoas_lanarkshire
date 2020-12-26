@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'gallery',
+    'events',
     # Sass
     'django_sass',
     'sass_processor',

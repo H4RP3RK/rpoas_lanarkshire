@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content%}
+{% block content %}
 <!-- Search by title or description -->
 <h2 class="gallery__heading">Historical Photo Gallery</h2>
 <p class="gallery__text">Search through our collection of photos and see if you can spot any familiar faces/locations. Search for something in particular or filter by location or year. Click on each photo for a full description.</p>
@@ -15,7 +15,7 @@
     <!-- Sort -->
     <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
     <!-- Clear -->
-    <button class="gallery_btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
+    <button class="gallery__btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
 </form>
 
 <section class="gallery__container">
