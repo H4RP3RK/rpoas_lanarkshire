@@ -1,0 +1,80 @@
+[
+    {
+        "pk": 1,
+        "model": "events.event",
+        "fields": {
+            "title": "RPOAS Quiz Night",
+            "location": "Motherwell United Service Club, ML1 1TY",
+            "lat": 55.7841963,
+            "lng": -3.9906829,
+            "datetime": "2020-06-29 20:00",
+            "description": "Get your thinking caps on for the quiz night. Bring family and friends, the more the merrier. The winners will be crowned Lanarkshire Branch Champions and win a top prize.",
+            "photo": "quiznight-min.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "events.event",
+        "fields": {
+            "title": "Gin Trip in Auld Reekie",
+            "location": "National Museum of Scotland, Edinburgh, EH1 1JF",
+            "lat": 55.9469809,
+            "lng": -3.1927411,
+            "datetime": "2020-07-13 19:30",
+            "description": "Join us for a gin tasting at the beautiful National Museum of Scotland followed by dinner.",
+            "photo": "outdoors-min.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "events.event",
+        "fields": {
+            "title": "Drumpellier Police Dinner",
+            "location": "Drumpellier Golf Club, Coatbridge, ML5 1RX",
+            "lat": 55.8604836,
+            "lng": -4.0542339,
+            "datetime": "2020-07-30 19:00",
+            "description": "Slap up meal with old friends.",
+            "photo": "drumpellier-min.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "events.event",
+        "fields": {
+            "title": "RPOAS Lunch",
+            "location": "The Castle Rooms, Uddingston, G71 7PE",
+            "lat": 55.820283,
+            "lng": -4.0835657,
+            "datetime": "2020-08-09 13:00",
+            "description": "Tea and a natter",
+            "photo": "afternoontea-min.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "events.event",
+        "fields": {
+            "title": "Quiz Night",
+            "location": "Colville Park Club, Motherwell, ML1 4UG",
+            "lat": 55.8006031,
+            "lng": -3.9837373,
+            "datetime": "2020-09-02 20:30",
+            "description": "Can you and your team mates take on the reigning champions for the coveted RPOAS trophy?",
+            "photo": "quiz-min.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "events.event",
+        "fields": {
+            "title": "Annual General Meeting",
+            "location": "Hamilton Caledonian Bowling Club, ML3 7BN",
+            "lat": 55.7753011,
+            "lng": -4.0311063,
+            "datetime": "2020-10-01 14:00",
+            "description": "Your vote counts for the election of the RPOAS Committee 2020-2021",
+            "photo": "reunion-min.jpg"
+        }
+    }
+]
