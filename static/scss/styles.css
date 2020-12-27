@@ -705,4 +705,14 @@ ul {
     border-top: 1px solid var(--primary-1);
   }
 }
+
+.events__accordion-top {
+  border-radius: 0;
+  border: 1px solid var(--primary-2);
+}
+
+.events__accordion-content {
+  border: 1px solid var(--primary-2);
+  background-color: var(--primary-2-tint);
+}
 /*# sourceMappingURL=styles.css.map */
