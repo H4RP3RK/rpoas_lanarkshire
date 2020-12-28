@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'gallery',
     'events',
+    'contact',
     # Sass
     'django_sass',
     'sass_processor',
