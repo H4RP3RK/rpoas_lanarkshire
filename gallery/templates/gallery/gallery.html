@@ -1,29 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block corejs%}
+<script src="https://unpkg.com/vue@next" defer></script>
+<script src="/static/gallery.js" defer></script>
+{% endblock %}
+
 {% block content %}
 <!-- Search by title or description -->
-<h2 class="gallery__heading">Historical Photo Gallery</h2>
-<p class="gallery__text">Search through our collection of photos and see if you can spot any familiar faces/locations. Search for something in particular or filter by location or year. Click on each photo for a full description.</p>
-<form class="gallery__search-form" action="{% url 'gallery' %}" method="GET">
-    <input class="gallery__search-input" type="text" aria-label="Search" name="q">
-    <input class="gallery__search-btn btn__primary" type="submit" value="Search">
-    <!-- Filter by Location -->
-    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
-    <!-- Filter by Year -->
-    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
-    <!-- Sort -->
-    <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
-    <!-- Clear -->
-    <button class="gallery__btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
-</form>
+<main id="gallery">
+    <h2 class="gallery__heading">Historical Photo Gallery</h2>
+    {{ message }}
+    <p class="gallery__text">Search through our collection of photos and see if you can spot any familiar faces/locations. Search for something in particular or filter by location or year. Click on each photo for a full description.</p>
+    <form class="gallery__search-form" action="{% url 'gallery' %}" method="GET">
+        <input class="gallery__search-input" type="text" aria-label="Search" name="q">
+        <input class="gallery__search-btn btn__primary" type="submit" value="Search">
+        <!-- Filter by Location -->
+        <div>
+            <button @click="toggle" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
+            <!-- <ul :style="display">
+            {% for image in images %}
+                <li>{{ image.location }}</li>
+            {% endfor %}
+            </ul> -->
+        </div>
+        <!-- Filter by Year -->
+        <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+        <!-- Sort -->
+        <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+        <!-- Clear -->
+        <button class="gallery__btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
+    </form>
 
-<section class="gallery__container">
-{% for image in images %}
-<div class="gallery__single-container">
-    <img class="gallery__image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
-</div>
-{% endfor %}
-</section>
-
+    <section class="gallery__container">
+    {% for image in images %}
+    <div class="gallery__single-container">
+        <img class="gallery__image" src="/media/{{ image.image }}" alt="{{ image.title }}, {{ image.year }}">
+    </div>
+    {% endfor %}
+    </section>
+</main>
 {% endblock %}
