@@ -10,26 +10,41 @@
 <!-- Search by title or description -->
 <main id="gallery">
     <h2 class="gallery__heading">Historical Photo Gallery</h2>
-    {{ message }}
     <p class="gallery__text">Search through our collection of photos and see if you can spot any familiar faces/locations. Search for something in particular or filter by location or year. Click on each photo for a full description.</p>
     <form class="gallery__search-form" action="{% url 'gallery' %}" method="GET">
         <input class="gallery__search-input" type="text" aria-label="Search" name="q">
         <input class="gallery__search-btn btn__primary" type="submit" value="Search">
         <!-- Filter by Location -->
         <div>
-            <button @click="toggle" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
-            <!-- <ul :style="display">
+            <button @click="current = 'location'" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Location</button>
+            <ul v-if="current == 'location'" :class="{closed: current != 'location'}" class="gallery__dropdown-list">
             {% for image in images %}
-                <li>{{ image.location }}</li>
+                <a href="{% url 'gallery' %}?location={{ image.location }}">{{ image.location }}</a>
             {% endfor %}
-            </ul> -->
+            </ul>
         </div>
         <!-- Filter by Year -->
-        <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+        <div>
+        <div>
+            <button @click="current = 'year'" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
+            <ul v-if="current == 'year'" :class="{closed: current != 'year'}" class="gallery__dropdown-list">
+                {% for image in images %}
+                    <li>{{ image.year }}</li>
+                {% endfor %}
+            </ul>
+        </div>
         <!-- Sort -->
-        <button class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+        <div>
+            <button @click="current = 'sort'" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+            <ul v-if="current == 'sort'" :class="{closed: active}" class="gallery__dropdown-list">
+                <li>Sort by Location</li>
+                <li>Sort by Year</li>
+            </ul>
+        </div>
         <!-- Clear -->
-        <button class="gallery__btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
+        <div>
+            <button class="gallery__btn btn__secondary" name="page-refresh" onclick="window.location.reload(true);" type="button">Clear Search Results</button>
+        </div>
     </form>
 
     <section class="gallery__container">

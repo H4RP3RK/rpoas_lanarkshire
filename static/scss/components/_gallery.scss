@@ -26,6 +26,12 @@
         margin-top: 1rem;
     }
 
+    &__dropdown-list {
+        &.closed {
+            display: none;
+        }
+    }
+
     &__container {
         display: flex;
         flex-flow: row wrap;

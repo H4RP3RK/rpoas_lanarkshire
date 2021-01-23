@@ -22,6 +22,11 @@ def view_gallery(request):
             queries = Q(title__icontains=query) | Q(caption__icontains=query)
             images = images.filter(queries)
         
+        if 'location' in request.GET:
+            filterLocation = request.GET['location'].split(',')
+            images = images.filter(location__name__in=filterLocation)
+            filterLocation = Product.objects.filter(name__in=product.location)
+        
 
         # if 'location' in request.GET:
         #     """ filter by location """

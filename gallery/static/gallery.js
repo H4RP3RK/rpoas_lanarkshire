@@ -1,21 +1,20 @@
 const app = Vue.createApp({
+    delimiters: ['[[', ']]'],
     data() {
         return {
-            message: 'HEllo world'
+            active: false,
+            current: ''
         };
-    },
-    computed: {
-        display() {
-            if (active === false) {
-                return {display: 'none'};
-            } else {
-                return {display: 'inline-block'};
-            }
-        }
     },
     methods: {
         toggle() {
-            this.active = !this.active;
+            active = !active;
+        }
+        toggleButton(current) {
+            if (current == 'location') {
+                this.current == 'location';
+                active = !active;
+            }
         }
     }
 });
