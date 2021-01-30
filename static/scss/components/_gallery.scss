@@ -1,55 +1,57 @@
 .gallery {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-    &__heading {
-        text-align: center;
-    }
+  &__heading {
+    text-align: center;
+  }
 
-    &__text {
-        text-align: center;
-    }
+  &__text {
+    text-align: center;
+  }
 
-    &__search-form {
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        vertical-align: center;
-    }
+  &__search-form {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    vertical-align: center;
+  }
 
-    &__search-input {
-        padding: 0.5rem;
-    }   
-    
-    &__dropdown-btn,
-    &__btn {
-        margin-top: 1rem;
-    }
+  &__search-input {
+    padding: 0.5rem;
+  }
 
-    &__dropdown-list {
-        &.closed {
-            display: none;
-        }
-    }
+  &__dropdown-btn,
+  &__btn {
+    margin-top: 1rem;
+  }
 
-    &__container {
-        display: flex;
-        flex-flow: row wrap;
+  &__dropdown-list {
+    margin-bottom: 5rem;
+
+    &.closed {
+      display: none;
     }
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 @media all and (min-width: 720px) {
-    .gallery {
-        &__single-container {
-            flex-basis: 50%;
-        }
+  .gallery {
+    &__single-container {
+      flex-basis: 50%;
     }
+  }
 }
 
 @media all and (min-width: 960px) {
-    .gallery {
-        &__single-container {
-            flex-basis: 25%;
-        }
+  .gallery {
+    &__single-container {
+      flex-basis: 25%;
     }
+  }
 }

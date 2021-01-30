@@ -17,16 +17,12 @@
       aria-label="Search"
       name="q"
     />
-    <input
-      class="gallery__search-btn btn__primary"
-      type="submit"
-      value="Search"
-    />
+    <input class="gallery__btn btn__primary" type="submit" value="Search" />
     <!-- Filter by Location -->
     <div>
       <button
-        @click="current = 'location'"
-        class="gallery__dropdown-btn btn__primary"
+        onclick="toggle()"
+        class="gallery__btn btn__primary"
         type="button"
         id="dropdownLocation"
         data-toggle="dropdown"
@@ -35,32 +31,44 @@
       >
         Filter by Location
       </button>
-      <ul
-        v-if="current == 'location'"
-        :class="{closed: current != 'location'}"
-        class="gallery__dropdown-list"
-      >
-        {% for image in images %}
-        <a href="{% url 'gallery' %}?location={{ image.location }}"
-          >{{ image.location }}</a
-        >
+      <ul class="gallery__dropdown-list closed">
+        {% for image in location_values %}
+        <li class="gallery__dropdown-list-item">
+          <a href="{% url 'gallery' %}?location={{ image.location }}"
+            >{{ image.location }}</a
+          >
+        </li>
         {% endfor %}
       </ul>
     </div>
     <!-- Filter by Year -->
-    <!-- <div>
-            <button @click="current = 'year'" class="gallery__dropdown-btn btn__primary" type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Year</button>
-            <ul v-if="current == 'year'" :class="{closed: current != 'year'}" class="gallery__dropdown-list">
-                {% for image in images %}
-                        <a href="{% url 'gallery' %}?year={{ image.year }}">{{ image.year }}</a>
-                {% endfor %}
-            </ul>
-        </div> -->
+    <div>
+      <button
+        onclick="toggle()"
+        class="gallery__dropdown-btn btn__primary"
+        type="button"
+        id="dropdownYear"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Filter by Year
+      </button>
+      <ul class="gallery__dropdown-list closed">
+        {% for image in year_values %}
+        <li>
+          <a href="{% url 'gallery' %}?year={{ image.year }}"
+            >{{ image.year }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     <!-- Sort -->
     <div>
       <button
         @click="current = 'sort'"
-        class="gallery__dropdown-btn btn__primary"
+        class="gallery__btn btn__primary"
         type="button"
         id="dropdownSort"
         data-toggle="dropdown"
@@ -69,31 +77,35 @@
       >
         Sort By
       </button>
-      <ul
-        v-if="current == 'sort'"
-        :class="{closed: active}"
-        class="gallery__dropdown-list"
-      >
-        <a
-          class="dropdown-item"
-          href="{% url 'gallery' %}?sort=location&direction=asc"
-          >Location (A-Z)</a
-        >
-        <a
-          class="dropdown-item"
-          href="{% url 'gallery' %}?sort=location&direction=desc"
-          >Location (Z-A)</a
-        >
-        <a
-          class="dropdown-item"
-          href="{% url 'gallery' %}?sort=year&direction=asc"
-          >Year (Oldest)</a
-        >
-        <a
-          class="dropdown-item"
-          href="{% url 'gallery' %}?sort=year&direction=desc"
-          >Year (Most Recent)</a
-        >
+      <ul class="gallery__dropdown-list closed">
+        <li>
+          <a
+            class="dropdown-item"
+            href="{% url 'gallery' %}?sort=location&direction=asc"
+            >Location (A-Z)</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="{% url 'gallery' %}?sort=location&direction=desc"
+            >Location (Z-A)</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="{% url 'gallery' %}?sort=year&direction=asc"
+            >Year (Oldest)</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="{% url 'gallery' %}?sort=year&direction=desc"
+            >Year (Most Recent)</a
+          >
+        </li>
       </ul>
     </div>
     <!-- Clear -->

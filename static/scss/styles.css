@@ -629,6 +629,14 @@ ul {
   margin-top: 1rem;
 }
 
+.gallery__dropdown-list {
+  margin-bottom: 5rem;
+}
+
+.gallery__dropdown-list.closed {
+  display: none;
+}
+
 .gallery__container {
   display: -webkit-box;
   display: -ms-flexbox;

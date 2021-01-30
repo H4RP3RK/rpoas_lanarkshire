@@ -1,22 +1,5 @@
-const app = Vue.createApp({
-    delimiters: ['[[', ']]'],
-    data() {
-        return {
-            active: false,
-            current: ''
-        };
-    },
-    methods: {
-        toggle() {
-            active = !active;
-        }
-        toggleButton(current) {
-            if (current == 'location') {
-                this.current == 'location';
-                active = !active;
-            }
-        }
-    }
-});
-
-app.mount('#gallery');
+function toggle() {
+    let button = this.Element
+    let displayList = document.querySelector('.gallery__dropdown-list');
+    displayList.classList.toggle("closed");
+}
