@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.db.models.functions import Lower
 from .models import Image
 
@@ -32,17 +32,19 @@ def view_gallery(request):
 
         if 'location' in request.GET:
             filterLocation = request.GET['location'].split(',')
+            filterLocationValue = filterLocation[0]
             images = images.filter(location__in=filterLocation)
             locationValues = images.values('location').distinct()
             yearValues = images.values('year').distinct()
-            filterLocation = Image.objects.filter(location__in=images)
+            if 'sort' in request.GET:
+                images = images.order_by(sortkey)
         
         if 'year' in request.GET:
             filterYear = request.GET['year'].split(',')
+            filterYearValue = filterYear[0]
             images = images.filter(year__in=filterYear)
             yearValues = images.values('year').distinct()
             locationValues = images.values('location').distinct()
-            filterYear = Image.objects.filter(year__in=images)
 
         if 'q' in request.GET:
             """ search by keyword in title or caption"""
@@ -60,11 +62,12 @@ def view_gallery(request):
 
     context = {
         'images': images,
+        'image_count': images.count(),
         'search_term': query,
         'current_location': locations,
         'current_sorting': current_sorting,
         'location_values': locationValues,
-        'year_values': yearValues,
+        'year_values': yearValues
     }
 
     return render(request, 'gallery/gallery.html', context)

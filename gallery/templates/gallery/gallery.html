@@ -19,9 +19,9 @@
     />
     <input class="gallery__btn btn__primary" type="submit" value="Search" />
     <!-- Filter by Location -->
-    <div>
+    <div class="gallery__dropdown">
       <button
-        onclick="toggle()"
+        onclick="toggle('dropdownLocation')"
         class="gallery__btn btn__primary"
         type="button"
         id="dropdownLocation"
@@ -42,9 +42,9 @@
       </ul>
     </div>
     <!-- Filter by Year -->
-    <div>
+    <div class="gallery__dropdown">
       <button
-        onclick="toggle()"
+        onclick="toggle('dropdownYear')"
         class="gallery__dropdown-btn btn__primary"
         type="button"
         id="dropdownYear"
@@ -56,7 +56,7 @@
       </button>
       <ul class="gallery__dropdown-list closed">
         {% for image in year_values %}
-        <li>
+        <li class="gallery__dropdown-list-item">
           <a href="{% url 'gallery' %}?year={{ image.year }}"
             >{{ image.year }}</a
           >
@@ -65,52 +65,42 @@
       </ul>
     </div>
     <!-- Sort -->
-    <div>
+    <div class="gallery__dropdown">
       <button
-        @click="current = 'sort'"
-        class="gallery__btn btn__primary"
+        onclick="toggle('dropdownSort')"
+        class="gallery__dropdown-btn btn__primary"
         type="button"
         id="dropdownSort"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
       >
-        Sort By
+        Sort By Year
       </button>
       <ul class="gallery__dropdown-list closed">
-        <li>
-          <a
-            class="dropdown-item"
-            href="{% url 'gallery' %}?sort=location&direction=asc"
-            >Location (A-Z)</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            href="{% url 'gallery' %}?sort=location&direction=desc"
-            >Location (Z-A)</a
-          >
-        </li>
-        <li>
+        <li class="gallery__dropdown-list-item">
           <a
             class="dropdown-item"
             href="{% url 'gallery' %}?sort=year&direction=asc"
-            >Year (Oldest)</a
+            >Oldest</a
           >
         </li>
-        <li>
+        <li class="gallery__dropdown-list-item">
           <a
             class="dropdown-item"
             href="{% url 'gallery' %}?sort=year&direction=desc"
-            >Year (Most Recent)</a
+            >Most Recent</a
           >
         </li>
       </ul>
     </div>
     <!-- Clear -->
-    <div>
-      <a class="gallery__btn btn__secondary" href="{% url 'gallery' %}"
+    <p>Showing {{ image_count }} photos</p>
+
+    <p>{% if filter_location %} from {{ filter_location }} {% endif %}</p>
+
+    <div class="gallery__clear-btn">
+      <a class="btn__secondary" href="{% url 'gallery' %}"
         >Clear Search Results</a
       >
     </div>
@@ -118,12 +108,26 @@
 
   <section class="gallery__container">
     {% for image in images %}
-    <div class="gallery__single-container">
-      <img
-        class="gallery__image"
-        src="/media/{{ image.image }}"
-        alt="{{ image.title }}, {{ image.year }}"
-      />
+    <div class="gallery__single-container" onclick="toggle('modal')" id="modal">
+      <div>
+        <img
+          class="gallery__image"
+          src="/media/{{ image.image }}"
+          alt="{{ image.title }}, {{ image.year }}"
+        />
+      </div>
+      <h4>
+        {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
+      </h4>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal closed" onclick="toggle('modal')">
+      <article class="modal__content">
+        <h3>
+          {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
+        </h3>
+      </article>
     </div>
     {% endfor %}
   </section>

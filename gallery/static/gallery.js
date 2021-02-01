@@ -1,5 +1,8 @@
-function toggle() {
-    let button = this.Element
-    let displayList = document.querySelector('.gallery__dropdown-list');
+// Toggles filter buttons
+
+function toggle(btnName) {
+    const button = document.querySelector(`#${btnName}`);
+    const displayList = button.nextElementSibling;
     displayList.classList.toggle("closed");
 }
+
