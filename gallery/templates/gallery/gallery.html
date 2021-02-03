@@ -108,7 +108,11 @@
 
   <section class="gallery__container">
     {% for image in images %}
-    <div class="gallery__single-container" onclick="toggle('modal')" id="modal">
+    <div
+      class="gallery__single-container"
+      onclick="toggle('modal{{ image.id }}')"
+      id="modal{{ image.id }}"
+    >
       <div>
         <img
           class="gallery__image"
@@ -116,18 +120,25 @@
           alt="{{ image.title }}, {{ image.year }}"
         />
       </div>
-      <h4>
+      <h4 class="gallery__title">
         {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
       </h4>
     </div>
 
     <!-- Modal -->
-    <div class="modal closed" onclick="toggle('modal')">
-      <article class="modal__content">
-        <h3>
-          {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
-        </h3>
-      </article>
+    <div class="modal closed" onclick="toggle('modal{{ image.id }}')">
+      <div class="modal__backdrop">
+        <article class="modal__content">
+          <h3 class="modal__title">
+            {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
+          </h3>
+          <img
+            src="/media/{{ image.image }}"
+            alt="{{ image.title }}, {{ image.year }}"
+          />
+          <p class="modal__caption">{{ image.caption }}</p>
+        </article>
+      </div>
     </div>
     {% endfor %}
   </section>

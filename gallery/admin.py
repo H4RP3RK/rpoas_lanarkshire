@@ -3,6 +3,7 @@ from .models import Image
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = (
+        "id",
         "title",
         "location",
         "year",
