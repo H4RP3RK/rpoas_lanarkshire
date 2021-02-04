@@ -725,6 +725,22 @@ ul {
   top: 0;
 }
 
+.modal__arrow {
+  font-size: 4vh;
+  opacity: 0.8;
+  position: absolute;
+}
+
+.modal__arrow.left {
+  left: 0;
+  top: 50%;
+}
+
+.modal__arrow.right {
+  right: 0;
+  top: 50%;
+}
+
 @media all and (min-width: 720px) {
   .gallery__container {
     -webkit-box-pack: center;

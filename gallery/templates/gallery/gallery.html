@@ -136,10 +136,12 @@
             class="modal__close-cross fas fa-window-close"
             onclick="toggle('modal{{ image.id }}')"
           ></i>
+          <i class="modal__arrow left fas fa-angle-left"></i>
           <img
             src="/media/{{ image.image }}"
             alt="{{ image.title }}, {{ image.year }}"
           />
+          <i class="modal__arrow right fas fa-angle-right"></i>
           <p class="modal__caption">{{ image.caption }}</p>
         </article>
       </div>

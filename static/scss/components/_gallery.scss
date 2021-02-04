@@ -114,6 +114,22 @@
     right: 0;
     top: 0;
   }
+
+  &__arrow {
+    font-size: 4vh;
+    opacity: 0.8;
+    position: absolute;
+
+    &.left {
+      left: 0;
+      top: 50%;
+    }
+
+    &.right {
+      right: 0;
+      top: 50%;
+    }
+  }
 }
 
 @media all and (min-width: 720px) {
