@@ -1,11 +1,15 @@
 .events {
-    &__accordion-top {
-        border-radius: 0;
-        border: 1px solid var(--primary-2);
-    }
+  &__accordion-top {
+    border-radius: 0;
+    border: 1px solid var(--primary-2);
+  }
 
-    &__accordion-content {
-        border: 1px solid var(--primary-2);
-        background-color: var(--primary-2-tint);
+  &__accordion-content {
+    border: 1px solid var(--primary-2);
+    background-color: var(--primary-2-tint);
+
+    &.closed {
+      display: none;
     }
+  }
 }

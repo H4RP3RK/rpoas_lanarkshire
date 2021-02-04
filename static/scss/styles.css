@@ -733,6 +733,8 @@ ul {
   top: 0;
   bottom: 0;
   position: absolute;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
 
 .modal__arrow.left {
@@ -840,5 +842,9 @@ ul {
 .events__accordion-content {
   border: 1px solid var(--primary-2);
   background-color: var(--primary-2-tint);
+}
+
+.events__accordion-content.closed {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
