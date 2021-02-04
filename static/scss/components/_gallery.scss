@@ -82,7 +82,7 @@
 }
 
 .modal {
-  z-index: 999;
+  z-index: 99;
 
   &.closed {
     display: none;
@@ -113,22 +113,28 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 999;
   }
 
   &__arrow {
     font-size: 4vh;
     opacity: 0.8;
+    background-color: #ffffff;
+    top: 0;
+    bottom: 0;
     position: absolute;
 
     &.left {
       left: 0;
-      top: 50%;
     }
 
     &.right {
       right: 0;
-      top: 50%;
     }
+  }
+
+  &__arrow-icon {
+    padding-top: 50vh;
   }
 }
 

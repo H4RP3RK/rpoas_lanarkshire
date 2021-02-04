@@ -126,7 +126,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal closed">
+    <div class="modal closed" id="openModal{{ image.id }}">
       <div class="modal__backdrop">
         <article class="modal__content">
           <h3 class="modal__title">
@@ -136,12 +136,22 @@
             class="modal__close-cross fas fa-window-close"
             onclick="toggle('modal{{ image.id }}')"
           ></i>
-          <i class="modal__arrow left fas fa-angle-left"></i>
+          <div
+            class="modal__arrow left"
+            onclick="previousImage('openModal{{ image.id }}')"
+          >
+            <i class="modal__arrow-icon fas fa-angle-left"></i>
+          </div>
           <img
             src="/media/{{ image.image }}"
             alt="{{ image.title }}, {{ image.year }}"
           />
-          <i class="modal__arrow right fas fa-angle-right"></i>
+          <div
+            class="modal__arrow right"
+            onclick="nextImage('openModal{{ image.id }}')"
+          >
+            <i class="modal__arrow-icon fas fa-angle-right"></i>
+          </div>
           <p class="modal__caption">{{ image.caption }}</p>
         </article>
       </div>

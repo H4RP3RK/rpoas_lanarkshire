@@ -691,7 +691,7 @@ ul {
 }
 
 .modal {
-  z-index: 999;
+  z-index: 99;
 }
 
 .modal.closed {
@@ -723,22 +723,28 @@ ul {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 999;
 }
 
 .modal__arrow {
   font-size: 4vh;
   opacity: 0.8;
+  background-color: #ffffff;
+  top: 0;
+  bottom: 0;
   position: absolute;
 }
 
 .modal__arrow.left {
   left: 0;
-  top: 50%;
 }
 
 .modal__arrow.right {
   right: 0;
-  top: 50%;
+}
+
+.modal__arrow-icon {
+  padding-top: 50vh;
 }
 
 @media all and (min-width: 720px) {
