@@ -126,12 +126,16 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal closed" onclick="toggle('modal{{ image.id }}')">
+    <div class="modal closed">
       <div class="modal__backdrop">
         <article class="modal__content">
           <h3 class="modal__title">
             {{ image.title }} {% if image.year %} ({{ image.year }}) {% endif %}
           </h3>
+          <i
+            class="modal__close-cross fas fa-window-close"
+            onclick="toggle('modal{{ image.id }}')"
+          ></i>
           <img
             src="/media/{{ image.image }}"
             alt="{{ image.title }}, {{ image.year }}"

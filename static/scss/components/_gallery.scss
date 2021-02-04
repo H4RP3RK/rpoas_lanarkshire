@@ -59,10 +59,34 @@
     display: flex;
     flex-flow: row wrap;
   }
+
+  &__single-container {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    opacity: 0.8;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: inherit;
+  }
 }
 
 .modal {
   z-index: 999;
+
+  &.closed {
+    display: none;
+  }
 
   &__backdrop {
     position: fixed;
@@ -75,16 +99,20 @@
     overflow-y: scroll;
   }
 
-  &.closed {
-    display: none;
-  }
-
   &__content {
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    position: relative;
+  }
+
+  &__close-cross {
+    font-size: 4vh;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -98,7 +126,6 @@
       flex-basis: 49%;
       max-height: 300px;
       overflow-y: hidden;
-      position: relative;
       margin-bottom: 0.2rem;
 
       & img {
@@ -107,30 +134,8 @@
         margin-left: auto;
         margin-right: auto;
       }
-
-      & h4 {
-        position: absolute;
-        display: block;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        opacity: 0.8;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        width: inherit;
-      }
     }
   }
-
-  // .modal {
-  //   &__content {
-  //     padding: 1rem;
-  //   }
-  // }
 }
 
 @media all and (min-width: 960px) {
