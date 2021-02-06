@@ -834,6 +834,16 @@ ul {
   }
 }
 
+#eventsMap {
+  height: 70vh;
+  width: 100%;
+}
+
+.events__map {
+  height: 100%;
+  width: 100%;
+}
+
 .events__accordion-top {
   border-radius: 0;
   border: 1px solid var(--primary-2);
