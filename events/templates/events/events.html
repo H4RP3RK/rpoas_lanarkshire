@@ -2,7 +2,16 @@
 <script src="/static/events.js" defer></script>
 {% endblock %} {% block content %}
 <main class="events">
-  <div class="events__map" id="eventsMap"></div>
+  <h2 class="events__heading">Find Events Near You</h2>
+  <p class="events__text">
+    We hold many different events throughout the year that are open to members
+    and their family/friends. You can browse the events below and logged in
+    members can book themselves a place.
+  </p>
+  <button onclick="toggle('browseMap')" id="browseMap" class="btn__primary">
+    Browse the Map
+  </button>
+  <div class="events__map closed" id="eventsMap"></div>
   <div class="events__accordion"></div>
   {% for event in events %}
   <div
@@ -12,7 +21,6 @@
   >
     <h3 class="events__title">{{ event.title }}</h3>
     <h4>{{ event.datetime }}</h4>
-    <h5 class="events__location">{{ event.location }}</h5>
   </div>
   <div class="events__accordion-content closed">
     <img
@@ -20,6 +28,7 @@
       src="/media/{{ event.photo }}"
       alt="{{ event.title }}"
     />
+    <h5 class="events__location">{{ event.location }}</h5>
     <p class="events__description">{{ event.description }}</p>
   </div>
   {% endfor %}

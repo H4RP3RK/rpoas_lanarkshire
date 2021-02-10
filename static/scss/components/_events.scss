@@ -1,9 +1,21 @@
 #eventsMap {
   height: 70vh;
   width: 100%;
+
+  &.closed {
+    display: none;
+  }
 }
 
 .events {
+  &__heading {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
   &__map {
     height: 100%;
     width: 100%;

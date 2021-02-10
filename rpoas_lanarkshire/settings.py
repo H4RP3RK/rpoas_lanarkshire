@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     # Sass
     'django_sass',
     'sass_processor',
-    'compressor'
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -162,3 +162,5 @@ SASS_PROCESSOR_ROOT = STATIC_ROOT
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+

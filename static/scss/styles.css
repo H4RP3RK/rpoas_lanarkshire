@@ -604,20 +604,10 @@ ul {
 }
 
 .gallery {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.gallery__heading {
-  text-align: center;
-}
-
-.gallery__text {
   text-align: center;
 }
 
 .gallery__search-form {
-  text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
   vertical-align: center;
@@ -750,6 +740,10 @@ ul {
 }
 
 @media all and (min-width: 720px) {
+  .gallery {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .gallery__container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -775,6 +769,10 @@ ul {
     -ms-flex-preferred-size: 24%;
         flex-basis: 24%;
     max-height: 250px;
+  }
+  .gallery__text {
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
   .modal__content {
     max-width: 75vw;
@@ -837,6 +835,18 @@ ul {
 #eventsMap {
   height: 70vh;
   width: 100%;
+}
+
+#eventsMap.closed {
+  display: none;
+}
+
+.events__heading {
+  text-align: center;
+}
+
+.events__text {
+  text-align: center;
 }
 
 .events__map {

@@ -1,6 +1,7 @@
 function toggle(elName) {
     const el = document.querySelector(`#${elName}`);
     const displayList = el.nextElementSibling;
+    el.classList.toggle('closed');
     displayList.classList.toggle('closed');
 }
 
@@ -11,6 +12,7 @@ function initMap() {
         zoom: 9,
         center: {lat: 55.8617792, lng: -3.7054024}
     });
+    setMarkers(map);
 }
 
 // function setMarkers(map) {

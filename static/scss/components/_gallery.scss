@@ -1,17 +1,7 @@
 .gallery {
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  &__heading {
-    text-align: center;
-  }
-
-  &__text {
-    text-align: center;
-  }
+  text-align: center;
 
   &__search-form {
-    text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     vertical-align: center;
@@ -142,6 +132,9 @@
 
 @media all and (min-width: 720px) {
   .gallery {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     &__container {
       justify-content: center;
     }
@@ -167,6 +160,11 @@
     &__single-container {
       flex-basis: 24%;
       max-height: 250px;
+    }
+
+    &__text {
+      margin-left: 10rem;
+      margin-right: 10rem;
     }
   }
 
