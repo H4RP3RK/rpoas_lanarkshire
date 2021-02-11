@@ -8,25 +8,16 @@
 }
 
 .events {
-  &__heading {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  &__text {
-    text-align: center;
-  }
-
-  &__map {
-    height: 100%;
-    width: 100%;
-  }
-
-  &__accordion-top {
+.accordion {
+  &__top {
     border-radius: 0;
     border: 1px solid var(--primary-2);
   }
 
-  &__accordion-content {
+  &__content {
     border: 1px solid var(--primary-2);
     background-color: var(--primary-2-tint);
 

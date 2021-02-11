@@ -1,37 +1,46 @@
 {% extends "base.html" %} {% load static %} {% block corejs%}
 <script src="/static/events.js" defer></script>
 {% endblock %} {% block content %}
-<main class="events">
-  <h2 class="events__heading">Find Events Near You</h2>
-  <p class="events__text">
-    We hold many different events throughout the year that are open to members
-    and their family/friends. You can browse the events below and logged in
-    members can book themselves a place.
-  </p>
-  <button onclick="toggle('browseMap')" id="browseMap" class="btn__primary">
-    Browse the Map
-  </button>
-  <div class="events__map closed" id="eventsMap"></div>
-  <div class="events__accordion"></div>
-  {% for event in events %}
-  <div
-    class="events__accordion-top"
-    onclick="toggle('event{{ event.id }}')"
-    id="event{{ event.id }}"
-  >
-    <h3 class="events__title">{{ event.title }}</h3>
-    <h4>{{ event.datetime }}</h4>
+<main>
+  <section class="events">
+    <h2 class="events__heading">Find Events Near You</h2>
+    <p class="events__text">
+      We hold many different events throughout the year that are open to members
+      and their family/friends. You can browse the events below and logged in
+      members can book themselves a place.
+    </p>
+    <button
+      onclick="toggle('browseMap')"
+      id="browseMap"
+      class="events__button btn__primary"
+    >
+      Browse the Map
+    </button>
+    <div class="events__map closed" id="eventsMap"></div>
+  </section>
+  <div class="accordion">
+    {% for event in events %}
+    <div
+      class="accordion__top"
+      onclick="toggle('event{{ event.id }}')"
+      id="event{{ event.id }}"
+      data-lat="{{ event.lat }}"
+      data-lng="{{ event.lng }}"
+    >
+      <h3 class="accordion__title">{{ event.title }}</h3>
+      <h4>{{ event.datetime }}</h4>
+    </div>
+    <div class="accordion__content closed">
+      <img
+        class="accordion__image"
+        src="/media/{{ event.photo }}"
+        alt="{{ event.title }}"
+      />
+      <h5 class="accordion__location">{{ event.location }}</h5>
+      <p class="accordion__description">{{ event.description }}</p>
+    </div>
+    {% endfor %}
   </div>
-  <div class="events__accordion-content closed">
-    <img
-      class="events__image"
-      src="/media/{{ event.photo }}"
-      alt="{{ event.title }}"
-    />
-    <h5 class="events__location">{{ event.location }}</h5>
-    <p class="events__description">{{ event.description }}</p>
-  </div>
-  {% endfor %}
 </main>
 
 <script

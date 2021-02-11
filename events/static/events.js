@@ -1,11 +1,10 @@
 function toggle(elName) {
     const el = document.querySelector(`#${elName}`);
     const displayList = el.nextElementSibling;
-    el.classList.toggle('closed');
     displayList.classList.toggle('closed');
-}
+};
 
-// Google Mapß
+// Google Maps
 
 function initMap() {
     const map = new google.maps.Map(document.querySelector("#eventsMap"), {
@@ -13,18 +12,19 @@ function initMap() {
         center: {lat: 55.8617792, lng: -3.7054024}
     });
     setMarkers(map);
-}
+};
 
-// function setMarkers(map) {
-//     const eventsList = document.querySelector(".events__accordion");
-
-//     events.forEach((event) => {
-//         const marker = new google.maps.Marker({
-//             map: map,
-//             position: {lat: event.lat, lng: event.lng},
-//             title: event.title,
-//             number: event.number
-//         });
+function setMarkers(map) {
+    const events = Array.from(document.querySelectorAll(".accordion__top"));
+    events.forEach((event) => {
+        const marker = new google.maps.Marker({
+        map: map,
+        position: {lat: parseFloat(event.dataset.lat), lng: parseFloat(event.dataset.lng)},
+        title: "Marker",
+    });
+    console.log(marker)
+    }
+)}
 //         const windowContent = `
 //             <h4>${event.title}</h4>
 //             <h5>${event.location}</h5>

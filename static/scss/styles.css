@@ -841,30 +841,21 @@ ul {
   display: none;
 }
 
-.events__heading {
+.events {
   text-align: center;
 }
 
-.events__text {
-  text-align: center;
-}
-
-.events__map {
-  height: 100%;
-  width: 100%;
-}
-
-.events__accordion-top {
+.accordion__top {
   border-radius: 0;
   border: 1px solid var(--primary-2);
 }
 
-.events__accordion-content {
+.accordion__content {
   border: 1px solid var(--primary-2);
   background-color: var(--primary-2-tint);
 }
 
-.events__accordion-content.closed {
+.accordion__content.closed {
   display: none;
 }
 /*# sourceMappingURL=styles.css.map */
