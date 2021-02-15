@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 :root {
+  // Fonts
+  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Playfair Display", serif;
 
-    // Fonts
-    --font-body: 'Open Sans', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+  // Backgrounds
+  --gradient-1: linear-gradient(#006a94 0%, #00387b 100%);
+  --gradient-2: linear-gradient(#f7d994 0%, #baa571 100%);
+  --gradient-3: linear-gradient(#833960 0%, #640738 100%);
 
-    // Backgrounds
-    --gradient-1: linear-gradient(#006a94 0%, #00387b 100%);
-    --gradient-2: linear-gradient(#f7d994 0%, #BAA571 100%);
-    --gradient-3: linear-gradient(#833960 0%, #640738 100%);
+  // Accordion
+  --gradient-4: linear-gradient(#ebeff5 0%, #ffffff 100%);
 
-    // Colours
-    --primary-1: #00387b;
-    --primary-2: #baa571;
-    --primary-3: #640738;
+  // Colours
+  --primary-1: #00387b;
+  --primary-2: #baa571;
+  --primary-3: #640738;
 
-    // Colour Tints
-    --primary-1-tint: #ffffff;
-    --primary-2-tint: #ebeff5; 
-    --primary-3-tint: #E0CDD7;
-
+  // Colour Tints
+  --primary-1-tint: #ffffff;
+  --primary-2-tint: #ebeff5;
+  --primary-3-tint: #e0cdd7;
 }

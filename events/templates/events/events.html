@@ -28,7 +28,7 @@
       data-lng="{{ event.lng }}"
     >
       <h3 class="accordion__title">{{ event.title }}</h3>
-      <h4>{{ event.datetime }}</h4>
+      <h4>{{ event.datetime|date:"d M Y" }}</h4>
     </div>
     <div class="accordion__content closed">
       <img

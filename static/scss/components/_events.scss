@@ -12,17 +12,32 @@
 }
 
 .accordion {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 30px var(--primary-1);
+
   &__top {
     border-radius: 0;
     border: 1px solid var(--primary-2);
+    background-image: var(--gradient-4);
   }
 
   &__content {
     border: 1px solid var(--primary-2);
-    background-color: var(--primary-2-tint);
 
     &.closed {
       display: none;
     }
+  }
+}
+
+@media all and (min-width: 720px) {
+}
+
+@media all and (min-width: 960px) {
+  .accordion {
   }
 }

@@ -4,7 +4,7 @@ from .models import Event
 
 def events(request):
     """ view for events page """
-    events = Event.objects.all()
+    events = Event.objects.order_by('datetime')
     context = {
         'events': events,
     }
