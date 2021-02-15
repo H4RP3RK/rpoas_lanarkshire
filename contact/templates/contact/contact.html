@@ -1,29 +1,35 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<main>
+{% extends "base.html" %} {% load static %} {% block corejs %}
+<script src="/static/contact.js" defer></script>
+{% endblock %} {% block content %}
+<main class="contact">
   <h2 class="contact__heading">Get in Touch</h2>
   <p class="contact__text"></p>
-  <form onsubmit="return sendMail(this);">
+  <form class="contact__form" onsubmit="return sendMail(this);">
     <input
+      class="contact__input"
       type="text"
       name="fullName"
       id="fullName"
-      placeholder="Name"
+      placeholder="Your Name"
       required
     />
     <input
+      class="contact__input"
       type="email"
       name="emailAddress"
       id="emailAddress"
-      placeholder="Email Address"
+      placeholder="Your Email Address"
       required
     />
     <textarea
+      class="contact__input"
       name="query"
       id="query"
       rows="5"
-      placeholder="Get in touch with any questions or suggestions"
+      placeholder="What would you like to talk to us about?"
       required
     ></textarea>
+    <button class="contact__btn btn__primary" type="submit">Send</button>
   </form>
 </main>
 

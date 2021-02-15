@@ -1,6 +1,5 @@
-
 function sendMail(contactForm) {
-    const centerForm = document.querySelector(".center-form");
+    let centerForm = document.querySelector(".contact__form");
     
     emailjs.send("gmail", "rpoas", {
         "from_name": contactForm.fullName.value,
@@ -17,4 +16,7 @@ function sendMail(contactForm) {
             centerForm.innerHTML = `<h1 class="email-message text-center form-section">Sorry ${contactForm.fullName.value}. There's seems to be a problem. Please try to send the email again</h1>`;
         });
     return false;
-}
+};
+
+console.log("hello");
+
