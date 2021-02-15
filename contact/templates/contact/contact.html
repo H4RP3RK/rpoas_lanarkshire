@@ -1,6 +1,30 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block content %}
+<main>
+  <h2 class="contact__heading">Get in Touch</h2>
+  <p class="contact__text"></p>
+  <form onsubmit="return sendMail(this);">
+    <input
+      type="text"
+      name="fullName"
+      id="fullName"
+      placeholder="Name"
+      required
+    />
+    <input
+      type="email"
+      name="emailAddress"
+      id="emailAddress"
+      placeholder="Email Address"
+      required
+    />
+    <textarea
+      name="query"
+      id="query"
+      rows="5"
+      placeholder="Get in touch with any questions or suggestions"
+      required
+    ></textarea>
+  </form>
+</main>
 
-{% block content %}
-<h2>Get in Touch</h2>
 {% endblock %}
