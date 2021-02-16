@@ -523,6 +523,7 @@ ul {
 }
 
 .footer__container {
+  position: relative;
   text-align: center;
   vertical-align: bottom;
   padding-top: 1rem;
@@ -536,11 +537,11 @@ ul {
 }
 
 .footer__logo {
-  height: 4em;
+  height: 3em;
 }
 
 .footer__fa-logo {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #ffffff;
 }
 
@@ -792,6 +793,13 @@ ul {
 
 .welcome-image {
   background-color: var(--primary-1-tint);
+  width: 100%;
+}
+
+.welcome-image__text {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .join-us {

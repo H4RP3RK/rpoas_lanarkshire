@@ -5,6 +5,13 @@
 
 .welcome-image {
   background-color: var(--primary-1-tint);
+  width: 100%;
+
+  &__text {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .join-us {
