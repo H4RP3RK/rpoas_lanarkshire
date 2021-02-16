@@ -1,6 +1,10 @@
+console.log('hello');
+
 function sendMail(contactForm) {
-    let centerForm = document.querySelector(".contact__form");
+    const centerForm = document.querySelector(".contact__form");
     
+    emailjs.init("user_80Z1Wpez4mTay5lvoIqSm");
+
     emailjs.send("gmail", "rpoas", {
         "from_name": contactForm.fullName.value,
         "from_email": contactForm.emailAddress.value,

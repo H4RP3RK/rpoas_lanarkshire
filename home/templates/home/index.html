@@ -1,66 +1,96 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content%}
+{% extends "base.html" %} {% load static %} {% block content%}
 <main class="main">
-    <section class="welcome-image">
-        <h2 class="welcome-image__heading">Welcome from the RPOAS Lanarkshire Committee</h2>
-        <img class="welcome-image__image" src="/media/rpoascommittee.jpeg" alt="RPOAS Lanarkshire Committee">
-        <p class="welcome-image__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet a consequuntur quaerat reiciendis eos atque libero accusantium quia eveniet officiis labore, hic, aperiam nostrum cumque voluptate ab aut molestiae.</p>
-    </section>
-    <section class="join-us">
-        <h2 class="join-us__heading">Who Should Join Us?</h2>
-        <img src="/media/outdoors.jpg" alt="Group on outdoors trip">
-        <p class="join-us__text">
-            We're open to all retired police officers, particuarly those who worked or lived in Lanarkshire.
-            Whether you're retired completely or working on, RPOAS Lanarkshire has something for you.
-            Spouses are also welcome to join.
-        </p>
-    </section>
-    <section class="benefits">
-        <h2 class="benefits__heading">What Do We Have To Offer?</h2>
-        <img src="/media/tulliallan-1982.jpg" alt="Tulliallan group photo">
-        <p class="benefits__text">A way to rekindle your passion for policing, enhance your life in retirement and ensure that you remain part of the police family.</p>
-        <ul class="benefits__list">
-            <li class="benefits__list-item">
-                <a class="benefits__link" href="#">
-                    Connect with old friends by attending social events in your area.
-                </a>
-            </li>
-            <li class="benefits__list-item">
-                <a class="benefits__link" href="#">
-                    Enjoy and contribute to our growing collection of historic Lanarkshire Police photographs.
-                </a>
-            </li>
-            <li class="benefits__list-item">
-                <a class="benefits__link" href="#">
-                    Our RPOAS Lanarkshire Branch is always on hand for questions or suggestions.
-                </a>
-            </li>
-            <li class="benefits__list-item">
-                <a class="benefits__link" href="#">
-                    Join the conversation on our Facebook Page.
-                </a>
-            </li>
-        </ul>
-        <a class="benefits__btn-link" href="#">
-            <h3 class="benefits__btn-text btn__action">Join Our RPOAS Family Today</h3>
+  <section class="welcome-image">
+    <h2 class="welcome-image__heading">
+      Welcome from the RPOAS Lanarkshire Committee
+    </h2>
+    <img
+      class="welcome-image__image"
+      src="/media/rpoascommittee.jpeg"
+      alt="RPOAS Lanarkshire Committee"
+    />
+    <p class="welcome-image__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      amet a consequuntur quaerat reiciendis eos atque libero accusantium quia
+      eveniet officiis labore, hic, aperiam nostrum cumque voluptate ab aut
+      molestiae.
+    </p>
+  </section>
+  <section class="join-us">
+    <h2 class="join-us__heading">Who Should Join Us?</h2>
+    <img
+      class="home__image"
+      src="/media/outdoors.jpg"
+      alt="Group on outdoors trip"
+    />
+    <p class="join-us__text">
+      We're open to all retired police officers, particuarly those who worked or
+      lived in Lanarkshire. Whether you're retired completely or working on,
+      RPOAS Lanarkshire has something for you. Spouses are also welcome to join.
+    </p>
+  </section>
+  <section class="benefits">
+    <h2 class="benefits__heading">What Do We Have To Offer?</h2>
+    <img
+      class="home__image"
+      src="/media/tulliallan-1982.jpg"
+      alt="Tulliallan group photo"
+    />
+    <p class="benefits__text">
+      A way to rekindle your passion for policing, enhance your life in
+      retirement and ensure that you remain part of the police family.
+    </p>
+    <ul class="benefits__list">
+      <li class="benefits__list-item">
+        <a class="benefits__link" href="#">
+          Connect with old friends by attending social events in your area.
         </a>
-    </section>
-    <section class="testimonials">
-        <h2 class="testimonials__heading">What Our Members Say</h2>
-        <img src="/media/drumpellier.jpg" alt="Drumpellier Golf Club Night">
-        <ul class="testimonials__list">
-            <li class="testimonials__list-item">
-                "The fun and laughter at every event is all down to the committee, who work tirelessly behind the scenes."
-            </li>
-            <li class="testimonials__list-item">
-                "Excellent way of keeping in touch with former colleagues and great work done by Henry Harper"
-            </li>
-            <li class="testimonials__list-item">
-                "The principal site to focus on former Lanarkshire Police Officers and the history of the Force."
-            </li>
-        </ul>
-    </section>
+      </li>
+      <li class="benefits__list-item">
+        <a class="benefits__link" href="#">
+          Enjoy and contribute to our growing collection of historic Lanarkshire
+          Police photographs.
+        </a>
+      </li>
+      <li class="benefits__list-item">
+        <a class="benefits__link" href="#">
+          Our RPOAS Lanarkshire Branch is always on hand for questions or
+          suggestions.
+        </a>
+      </li>
+      <li class="benefits__list-item">
+        <a class="benefits__link" href="#">
+          Join the conversation on our Facebook Page.
+        </a>
+      </li>
+    </ul>
+    <a class="benefits__btn-link" href="#">
+      <h3 class="benefits__btn-text btn__action">
+        Join Our RPOAS Family Today
+      </h3>
+    </a>
+  </section>
+  <section class="testimonials">
+    <h2 class="testimonials__heading">What Our Members Say</h2>
+    <img
+      class="home__image"
+      src="/media/drumpellier.jpg"
+      alt="Drumpellier Golf Club Night"
+    />
+    <ul class="testimonials__list">
+      <li class="testimonials__list-item">
+        "The fun and laughter at every event is all down to the committee, who
+        work tirelessly behind the scenes."
+      </li>
+      <li class="testimonials__list-item">
+        "Excellent way of keeping in touch with former colleagues and great work
+        done by Henry Harper"
+      </li>
+      <li class="testimonials__list-item">
+        "The principal site to focus on former Lanarkshire Police Officers and
+        the history of the Force."
+      </li>
+    </ul>
+  </section>
 </main>
 {% endblock %}
