@@ -2,8 +2,17 @@
   text-align: center;
 
   &__form {
+    & input {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      min-width: 60%;
+    }
   }
 
   &__btn {
+    margin: 1rem;
   }
 }

@@ -8,20 +8,11 @@
     <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
   </p>
 
-  <form
-    class="signup signup__form"
-    id="signup_form"
-    method="post"
-    action="{% url 'account_signup' %}"
-  >
+  <form class="signup signup__form" id="signup_form" method="post" action="{% url 'account_signup' %}">
     {% csrf_token %} {% for field in form %} {{ field }}
-    <input
-      type="hidden"
-      name="{{ redirect_field_name }}"
-      value="{{ redirect_field_value }}"
-    />
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endfor %}
-    <button class="signup__btn" type="submit">{% trans "Sign Up" %}</button>
+    <button class="signup__btn btn__primary" type="submit">{% trans "Sign Up" %}</button>
   </form>
 </main>
 {% endblock %}

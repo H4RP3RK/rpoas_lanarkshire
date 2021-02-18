@@ -2,72 +2,60 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-{% block meta %}
-    <meta http-equiv="X-UA_Compatible" content="ie=edge"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% endblock %}
-
-{% block extra_meta %}
-{% endblock %}
-
-{% block corecss%}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" type="text/css">
+    {% block meta %}
+    <meta http-equiv="X-UA_Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss%}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" type="text/css" />
     <link href="{% static 'scss/styles.css' %}" rel="stylesheet" type="text/css" />
-{% endblock %}
-
-{% block extra_css %}
-{% endblock %}
-
-{% block corejs%}
-{% endblock %}
-
-{% block extra_js %}
-{% endblock %}
+    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs%}
+    {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>RPOAS Lanarkshire</title>
 </head>
+
 <body>
     <header class="header">
         <a class="header__logo-link" href="#">
-            <img class="header__logo-image" src="/media/rpoas_logo.png" alt="RPOAS Logo">
+            <img class="header__logo-image" src="/media/rpoas_logo.png" alt="RPOAS Logo" />
         </a>
-        <h1 class="header__text">Retired Police Officers' Association Lanarkshire</h1>
-        <a class="banner__link" href="#">
+        <h1 class="header__text">
+            Retired Police Officers' Association Lanarkshire
+        </h1>
+        <a class="banner__link" href="{% url 'account_signup' %}">
             <h2 class="banner_text btn__action">Join our RPOAS family today</h2>
         </a>
         <nav class="header__nav">
             <a class="header__nav-link" href="{% url 'home' %}">
                 <h3>Home</h3>
-            </a> |
+            </a>
+            |
             <a class="header__nav-link" href="{% url 'gallery' %}">
                 <h3>Gallery</h3>
-            </a> |
+            </a>
+            |
             <a class="header__nav-link" href="{% url 'events' %}">
                 <h3>Events</h3>
-            </a> |
+            </a>
+            |
             <a class="header__nav-link" href="#">
                 <h3>News</h3>
-            </a> |
+            </a>
+            |
             <a class="header__nav-link" href="{% url 'contact' %}">
                 <h3>Contact</h3>
             </a>
         </nav>
     </header>
 
-{% if messages %}
-    <div class="message-container">
+    {% if messages %}
+    <div class="message-container"></div>
+    {% endif %} {% block page_header %} {% endblock %} {% block content %}
 
-    </div>
-{% endif %}    
-
-{% block page_header %}
-{% endblock %}
-
-{% block content %}
-{% endblock %}
-
+    {% endblock %}
 
     <footer class="footer">
         <article class="footer__container">
@@ -84,20 +72,19 @@
         </article>
         <article class="footer__container">
             <a class="footer__link" href="#">
-                <img class="footer__logo" src="/media/rpoas_logo.png" alt="RPOAS Scotland">
+                <img class="footer__logo" src="/media/rpoas_logo.png" alt="RPOAS Scotland" />
                 <h6 class="footer__text">RPOAS Scotland</h6>
             </a>
         </article>
         <article class="footer__container">
             <a class="footer__link" href="#">
-                <img class="footer__logo" src="/media/lphsbadge.png" alt="Lanarkshire Police Historical Society">
+                <img class="footer__logo" src="/media/lphsbadge.png" alt="Lanarkshire Police Historical Society" />
                 <h6 class="footer__text">Lanarkshire Police Historical Society</h6>
             </a>
         </article>
     </footer>
 
-{% block postloadjs %}
-{% endblock %}
-
+    {% block postloadjs %} {% endblock %}
 </body>
+
 </html>
