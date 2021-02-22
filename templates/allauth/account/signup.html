@@ -1,5 +1,11 @@
 {% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
-"Signup" %}{% endblock %} {% block content %}
+"Signup" %}{% endblock %}
+
+{% block extra_head %}
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
 <main class="signup">
   <h1>{% trans "Sign Up" %}</h1>
 
@@ -12,7 +18,15 @@
     {% csrf_token %} {% for field in form %} {{ field }}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endfor %}
+
     <button class="signup__btn btn__primary" type="submit">{% trans "Sign Up" %}</button>
   </form>
 </main>
+{% endblock %}
+
+{% block extra_body %}
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript" src="assets/js/signup.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 {% endblock %}
