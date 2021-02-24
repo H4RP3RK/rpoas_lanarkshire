@@ -1,40 +1,18 @@
 {% extends "base.html" %} {% load static %} {% block corejs %}
 <script src="/static/contact.js" defer></script>
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 {% endblock %} {% block content %}
-<main class="contact">
-  <h2 class="contact__heading">Get in Touch</h2>
-  <p class="contact__text"></p>
-  <div class="contact__form">
+<main class="form">
+  <h2 class="form__heading">Get in Touch</h2>
+  <p class="form__text"></p>
+  <div class="form__form">
     <form onsubmit="return sendMail(this);">
-      <input
-        class="contact__input"
-        type="text"
-        name="fullName"
-        id="fullName"
-        placeholder="Your Name"
-        required
-      />
-      <input
-        class="contact__input"
-        type="email"
-        name="emailAddress"
-        id="emailAddress"
-        placeholder="Your Email Address"
-        required
-      />
-      <textarea
-        class="contact__input"
-        name="query"
-        id="query"
-        rows="5"
-        placeholder="What would you like to talk to us about?"
-        required
-      ></textarea>
-      <button class="contact__btn btn__primary" type="submit">Send</button>
+      <input class="form__input" type="text" name="fullName" id="fullName" placeholder="Your Name" required />
+      <input class="form__input" type="email" name="emailAddress" id="emailAddress" placeholder="Your Email Address"
+        required />
+      <textarea class="form__input" name="query" id="query" rows="5"
+        placeholder="What would you like to talk to us about?" required></textarea>
+      <button class="form__btn btn__primary" type="submit">Send</button>
     </form>
   </div>
 </main>

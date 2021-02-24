@@ -1,48 +1,52 @@
 {% extends "base.html" %} {% load static %} {% block content%}
-<main class="mailchimp_signup">
+<main class="form">
+    <h2 class="form__heading">
+        Sign Up
+    </h2>
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="https://rpoas.us14.list-manage.com/subscribe/post?u=abdf3b9afbbb96cfc8c69b593&amp;id=b10e118415"
             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
             target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-                <div class="mc-field-group">
-                    <input type="text" value="" name="TITLE" class="" id="mce-TITLE" placeholder="Title">
+                <h3>Contact Details</h3>
+                <div class="mc-field-group" style="display: none;">
+                    <input type="text" value="" name="TITLE" class="form__input" id="mce-TITLE" placeholder="Title">
                 </div>
                 <div class="mc-field-group">
-                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Forename">
+                    <input type="text" value="" name="FNAME" class="form__input" id="mce-FNAME" placeholder="Forename">
                 </div>
                 <div class="mc-field-group">
-                    <input type="text" value="" name="SNAME" class="" id="mce-SNAME" placeholder="Surname">
+                    <input type="text" value="" name="SNAME" class="form__input" id="mce-SNAME" placeholder="Surname">
                 </div>
                 <div class="mc-field-group" style="display: none;">
                     <label for="mce-KNAME">Name Known By e.g. Andy/Willie etc. or Nickname </label>
-                    <input type="text" value="" name="KNAME" class="" id="mce-KNAME">
+                    <input type="text" value="" name="KNAME" class="form__input" id="mce-KNAME">
                 </div>
                 <div class="mc-address-group">
                     <div class="mc-field-group">
-                        <input type="text" value="" maxlength="70" name="ADDRESS[addr1]" id="mce-ADDRESS-addr1" class=""
-                            placeholder="Home Address">
+                        <input type="text" value="" maxlength="70" name="ADDRESS[addr1]" id="mce-ADDRESS-addr1"
+                            class="form__input" placeholder="Home Address">
                     </div>
                     <div class="mc-field-group" style="display: none;">
                         <label for="mce-ADDRESS-addr2">Address Line 2</label>
                         <input type="text" value="" maxlength="70" name="ADDRESS[addr2]" id="mce-ADDRESS-addr2">
                     </div>
                     <div class="mc-field-group size1of2">
-                        <input type="text" value="" maxlength="40" name="ADDRESS[city]" id="mce-ADDRESS-city" class=""
-                            placeholder="City">
+                        <input type="text" value="" maxlength="40" name="ADDRESS[city]" id="mce-ADDRESS-city"
+                            class="form__input" placeholder="City">
                     </div>
                     <div class="mc-field-group size1of2">
-                        <input type="text" value="" maxlength="20" name="ADDRESS[state]" id="mce-ADDRESS-state" class=""
-                            placeholder="County">
+                        <input type="text" value="" maxlength="20" name="ADDRESS[state]" id="mce-ADDRESS-state"
+                            class="form__input" placeholder="County">
                     </div>
                     <div class="mc-field-group size1of2">
-                        <input type="text" value="" maxlength="10" name="ADDRESS[zip]" id="mce-ADDRESS-zip" class=""
-                            placeholder="Postcode">
+                        <input type="text" value="" maxlength="10" name="ADDRESS[zip]" id="mce-ADDRESS-zip"
+                            class="form__input" placeholder="Postcode">
                     </div>
                     <div class="mc-field-group size1of2" style="display: none">
                         <label for="mce-ADDRESS-country">Country</label>
-                        <select name="ADDRESS[country]" id="mce-ADDRESS-country" class="">
+                        <select name="ADDRESS[country]" id="mce-ADDRESS-country" class="">form__input
                             <option value="164">USA</option>
                             <option value="286">Aaland Islands</option>
                             <option value="274">Afghanistan</option>
@@ -281,18 +285,20 @@
                     </div>
                 </div>
                 <div class="mc-field-group">
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+                    <input type="email" value="" name="EMAIL" class="form__input required email" id="mce-EMAIL"
+                        placeholder="Email">
                 </div>
                 <div class="mc-field-group size1of2">
-                    <input type="text" name="MOBILE" class="" value="" id="mce-MOBILE" placeholder="Telephone">
+                    <input type="text" name="MOBILE" class="form__input" value="" id="mce-MOBILE"
+                        placeholder="Telephone">
                 </div>
                 <div class="mc-field-group size1of2" style="display: none;">
                     <label for="mce-PHONE">Phone Number </label>
-                    <input type="text" name="PHONE" class="" value="" id="mce-PHONE">
+                    <input type="text" name="PHONE" class="form__input" value="" id="mce-PHONE">
                 </div>
-                <div class="mc-field-group size1of2">
-                    <label for="mce-DOB-month">Date of Birth </label>
-                    <div class="datefield">
+                <div class="mc-field-group size1of2 form__date">
+                    <label class="form__date-label" for="mce-DOB-month">Date of Birth </label>
+                    <div class="datefield form__datefield">
                         <span class="subfield dayfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
                                 placeholder="DD" size="2" maxlength="2" name="DOB[day]" id="mce-DOB-day"></span> /
                         <span class="subfield monthfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
@@ -301,9 +307,10 @@
                                 placeholder="YYYY" size="4" maxlength="4" name="DOB[year]" id="mce-DOB-year"></span>
                     </div>
                 </div>
+                <h3>Police Details</h3>
                 <div class="mc-field-group size1of2">
-                    <label for="mce-DJP-month">Date Joined Police </label>
-                    <div class="datefield">
+                    <label class="form__date-label" for="mce-DJP-month">Date Joined Police </label>
+                    <div class="datefield form__datefield">
                         <span class="subfield dayfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
                                 placeholder="DD" size="2" maxlength="2" name="DJP[day]" id="mce-DJP-day"></span> /
                         <span class="subfield monthfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
@@ -313,8 +320,8 @@
                     </div>
                 </div>
                 <div class="mc-field-group size1of2">
-                    <label for="mce-DRP-month">Date Retired From Police </label>
-                    <div class="datefield">
+                    <label class="form__date-label" for="mce-DRP-month">Date Retired From Police </label>
+                    <div class="datefield form__datefield">
                         <span class="subfield dayfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
                                 placeholder="DD" size="2" maxlength="2" name="DRP[day]" id="mce-DRP-day"></span> /
                         <span class="subfield monthfield"><input class="datepart " type="text" pattern="[0-9]*" value=""
@@ -324,33 +331,37 @@
                     </div>
                 </div>
                 <div class="mc-field-group size1of2">
-                    <input type="number" name="PRN" class="" value="" id="mce-PRN"
+                    <input type="number" name="PRN" class="form__input" value="" id="mce-PRN"
                         placeholder="Police Registration Number">
                 </div>
                 <div class="mc-field-group size1of2">
-                    <input type="number" name="PENSION" class="" value="" id="mce-PENSION" placeholder="Pension Number">
+                    <input type="number" name="PENSION" class="form__input" value="" id="mce-PENSION"
+                        placeholder="Pension Number">
                 </div>
                 <div class="mc-field-group">
-                    <textarea type="text" value="" name="SHIST" class="" id="mce-SHIST" rows="10"
+                    <textarea type="text" value="" name="SHIST" class="form__input" id="mce-SHIST" rows="10"
                         placeholder="Your Service History eg Where were you stationed? What was your rank?"></textarea>
                 </div>
+                <h3>Next of Kin</h3>
                 <div class="mc-field-group">
-                    <input type="text" value="" name="KINNAME" class="" id="mce-KINNAME"
+                    <input type="text" value="" name="KINNAME" class="form__input" id="mce-KINNAME"
                         placeholder="Next of Kin's name">
                 </div>
                 <div class="mc-field-group">
-                    <input type="text" value="" name="RELATION" class="" id="mce-RELATION" placeholder="Relationship">
+                    <input type="text" value="" name="RELATION" class="form__input" id="mce-RELATION"
+                        placeholder="Relationship">
                 </div>
                 <div class="mc-field-group">
-                    <input type="text" value="" name="KINEMAIL" class="" id="mce-KINEMAIL" placeholder="Email">
+                    <input type="text" value="" name="KINEMAIL" class="form__input" id="mce-KINEMAIL"
+                        placeholder="Email">
                 </div>
                 <div class="mc-field-group size1of2">
-                    <input type="text" name="MMERGE15" class="" value="" id="mce-MMERGE15"
+                    <input type="text" name="MMERGE15" class="form__input" value="" id="mce-MMERGE15"
                         placeholder="Telephone Number">
                 </div>
                 <div class="mc-field-group" style="display: none">
                     <label for="mce-KINADDRESS">Address (If different from yours) </label>
-                    <input type="text" value="" name="KINADDRESS" class="" id="mce-KINADDRESS">
+                    <input type="text" value="" name="KINADDRESS" class="form__input" id="mce-KINADDRESS">
                 </div>
                 <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
@@ -360,7 +371,7 @@
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                         name="b_abdf3b9afbbb96cfc8c69b593_b10e118415" tabindex="-1" value=""></div>
                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                        class="button"></div>
+                        class="button btn__primary"></div>
             </div>
         </form>
     </div>
